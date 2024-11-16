@@ -11,7 +11,7 @@ const fontGloria = Gloria_Hallelujah({
 
 export default function Home() {
   return (
-    <main className="flex h-full flex-col items-center justify-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#c2e59c] to-[#64b3f4]">
+    <main className="flex h-full flex-col items-center justify-center bg-gradient-to-r from-teal-400 to-yellow-200">
       <div className="space-y-6 text-center">
         <h1 className="text-6xl font-semibold text-white drop-shadow-lg">
           Auth 🛡️

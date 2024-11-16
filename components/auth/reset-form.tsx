@@ -2,12 +2,12 @@
 
 import * as z from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { Form, useForm } from "react-hook-form"
+import { useForm } from "react-hook-form"
 import { useState } from "react";
 import { ResetSchema } from "@/app/schemas";
 import { reset } from "@/action/reset";
 import CardWrapper from "./Card-wrapper";
-import { FormControl, FormField, FormItem, FormLabel, FormMessage } from "../ui/form";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "../ui/form";
 import { Input } from "../ui/input";
 import { FormError } from "../Form-error";
 import { FormSuccess } from "../Success";
