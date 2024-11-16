@@ -20,7 +20,7 @@ import {  z } from "zod";
 
 
 
-const settingsPage = () => {
+const SettingsPage = () => {
 
 const user = useCurrentUser();
 
@@ -205,4 +205,4 @@ const user = useCurrentUser();
     </Card>
   );
 };
-export default settingsPage;
+export default SettingsPage;
