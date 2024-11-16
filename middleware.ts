@@ -13,28 +13,31 @@ import { apiAuthPrefix, authRoutes, DEFAULT_REDIRECT, publicRoutes } from "./lib
 
 const {auth} = NextAuth(authConfig);
 
+
 export default auth((req) => {
     const isLoggedIn = !!req.auth;
-    const {nextUrl} = req;
+    const { nextUrl } = req;
 
     const isApiAuthRoute = nextUrl.pathname.startsWith(apiAuthPrefix);
     const isAuthRoute = authRoutes.includes(nextUrl.pathname);
     const isPublicRoute = publicRoutes.includes(nextUrl.pathname);
 
-    if(isApiAuthRoute){
-        return null;
+    if (isApiAuthRoute) {
+        return new Response(null, { status: 204 }); // Return an empty response with a status code
     }
 
-    if(isAuthRoute){
-       if(isLoggedIn){
-           return Response.redirect(new URL(DEFAULT_REDIRECT,nextUrl));
-       }
-       return null;
+    if (isAuthRoute) {
+        if (isLoggedIn) {
+            return Response.redirect(new URL(DEFAULT_REDIRECT, nextUrl));
+        }
+        return new Response(null, { status: 204 }); // Return a valid response
     }
-    if(!isPublicRoute && !isLoggedIn){
-        return Response.redirect(new URL("/auth/login",nextUrl));
+
+    if (!isPublicRoute && !isLoggedIn) {
+        return Response.redirect(new URL("/auth/login", nextUrl));
     }
-    return null;
+
+    return new Response(null, { status: 204 }); // Ensure a valid response is returned
 });
 
 
