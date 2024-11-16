@@ -62,7 +62,7 @@ export const ResetForm = ()=>{
                                 <FormLabel>Email</FormLabel>
                                 <FormControl>
                                     <Input {...field} type="email"
-                                    placeholder="gautam@example.com"
+                                    placeholder="Lema@example.com"
                                     />
                                 </FormControl>
                                 <FormMessage/>
