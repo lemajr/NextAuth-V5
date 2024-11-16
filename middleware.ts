@@ -14,6 +14,7 @@ export default auth((req) => {
   const isPublicRoute = publicRoutes.includes(nextUrl.pathname);
 
   // Allow access to API auth routes without redirecting
+  
   if (isApiAuthRoute) {
     return NextResponse.next();
   }
