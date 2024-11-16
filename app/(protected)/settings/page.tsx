@@ -78,7 +78,7 @@ const user = useCurrentUser();
               <FormLabel>Name</FormLabel>
               <FormControl>
                 <Input {...field} 
-                placeholder="Gautam Hegde"
+                placeholder="Gautam Jr"
               disabled={isPending}
                 />
               </FormControl>

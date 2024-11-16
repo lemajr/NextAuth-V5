@@ -9,7 +9,6 @@ import { useSearchParams } from "next/navigation";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -105,7 +104,7 @@ export const LoginForm = () => {
                         <Input
                           {...field}
                           type="email"
-                          placeholder="gautam@example.com"
+                          placeholder="lemajr@example.com"
                         />
                       </FormControl>
                       <FormMessage />
@@ -128,7 +127,6 @@ export const LoginForm = () => {
                       <Button
                         size={"sm"}
                         variant={"link"}
-                        asChild
                         className="px-0 font-light"
                       >
                         <Link href="/auth/reset">Forgot Password?</Link>
