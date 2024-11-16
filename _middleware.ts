@@ -2,8 +2,6 @@ import authConfig from "./auth.config";
 import NextAuth from "next-auth";
 import { apiAuthPrefix, authRoutes, DEFAULT_REDIRECT, publicRoutes } from "./lib/routes";
 
-
-
 // import {
 //    DEFAULT_REDIRECT,
 //     apiAuthPrefix,
