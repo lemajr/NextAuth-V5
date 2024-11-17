@@ -12,7 +12,7 @@ const getEnvVar = (key: string, defaultValue?: string) => {
 };
 
 // Base URL for links (use the environment variable or fallback to localhost)
-const BASE_URL = getEnvVar('BASE_URL', 'http://localhost:3000');
+const BASE_URL = getEnvVar('BASE_URL', 'https://next-auth-v5-kappa.vercel.app/');
 
 // Function to send a Two-Factor Authentication email
 export const sendTwoFactorMail = async (email: string, token: string) => {
